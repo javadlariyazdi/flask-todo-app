@@ -6,31 +6,39 @@ body{
     font-size: 16px;
 }
 
-section h1{
-    margin-left: 700px;
-    color: aqua;
-}
+
 
 .container{
     width: 100%;
     max-width: 1800px;
 }
 
-header,footer{
-    display: flex;
-    background-color: rgba(0, 0, 0, 0.886);
-    padding: 20px;
-
+header {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
 }
 
- header nav button{
-    text-decoration: none;
-    color: rgb(0, 9, 16);
-    border: 2px solid white;
-    border-radius: 10px;
-    padding: 3px 8px;
+header nav {
+    grid-column: 1 / 2; 
+}
+header nav button{
+    color: white;
+    margin-left: 5px;
     cursor: pointer;
- }
+    border: 2px solid white;
+    border-radius: 15px;
+    padding: 6px;
+    background-color: rgb(1, 36, 72);
+}
+
+header section {
+    grid-column: 2 / 3; 
+}
+
+header footer {
+    grid-column: 3 / 4; 
+}
 
 main{
     display: grid;
@@ -54,3 +62,4 @@ main{
     padding: 10px;
 
  }
+
